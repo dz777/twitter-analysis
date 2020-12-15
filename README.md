@@ -14,10 +14,7 @@ This project analyzes the Consumer Financial Protection Bureau's (CFPB) Twitter 
 
 ### Tweet type
 
-![png](1tweet_type_ratio.png)
-
-1tweet_type_ratio.png
-
+<img src="images/1tweet_type_ratio.png">
 
 Based on the pie chart above, we can see that roughly two-thirds of the tweets from the @CFPB page were original tweets. Almost one-third were replies to others, only a very small percentage (2.81%) were retweets, and 0.28% were quotes. 
 
