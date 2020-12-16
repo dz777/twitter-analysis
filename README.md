@@ -67,6 +67,7 @@ The table shows some interesting information about the different retweets metric
 
 The scatterplot depicts the relation between the number of times a specific Twitter handle tweeted, and the number of retweets. As noted above, @fema did very well, having a very low tweet count but a high number of retweets. @CFPBMilitary performed pretty poorly since it had a relatively high tweet count despite a fairly low retweet count in comparison. 
 
+### Top retweets
 
     RT @fema: We have created a rumor control page for Hurricane #Florence that will be updated regularly. During disasters, it’s critical to a…
     
@@ -88,7 +89,6 @@ The scatterplot depicts the relation between the number of times a specific Twit
     
     RT @SBAgov: #ICYMI: This morning, the #PaycheckProtectionProgram began accepting new loan applications in response to the Paycheck Protecti…
     
-
 
 ## Conclusion
 
