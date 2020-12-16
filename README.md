@@ -22,7 +22,7 @@ Based on the pie chart above, we can see that roughly two-thirds of the tweets f
 
 <img src="Images/2hashtag_wc.png">
 
-The word cloud visually shows the frequency of the used hashtags from the Twitter dataset. #KnowBeforeYouOwe, #MoneyAsYouGrow, and #StudentDebtStress were most frequently used and likely point toward their focus as an organization, such as about thinking before borrowing, regarding student debt, and saving up money. They were closely trailed by #MoneyTalk, #AskCFPB, and #CFPW2020.
+The word cloud visually shows the frequency of the used hashtags from the Twitter dataset. #KnowBeforeYouOwe, #MoneyAsYouGrow, and #StudentDebtStress were most frequently used and likely point toward their focus as an organization, such as about thinking before borrowing, student debt, and saving up money. They were closely trailed by #MoneyTalk, #AskCFPB, and #CFPW2020.
 
 
 ### Days of week
