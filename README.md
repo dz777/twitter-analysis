@@ -14,6 +14,8 @@ This project analyzes the Consumer Financial Protection Bureau's (CFPB) Twitter 
 
 ### Tweet type
 
+<img src="images/1timeseries_d_complaints.png">
+
 
 ![](https://github.com/dz777/twitter-analysis/blob/main/Images/1tweet_type_ratio.png)
 
