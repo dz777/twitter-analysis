@@ -21,6 +21,7 @@ Based on the pie chart above, we can see that roughly two-thirds of the tweets f
 ### Hashtags
 
 ![](https://github.com/dz777/twitter-analysis/blob/main/Images/2hashtag_wc.png)
+
 <img src="Images/2hashtag_wc.png">
 
 
