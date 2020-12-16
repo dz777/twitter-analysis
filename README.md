@@ -20,18 +20,14 @@ Based on the pie chart above, we can see that roughly two-thirds of the tweets f
 
 ### Hashtags
 
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/2hashtag_wc.png)
-
 <img src="Images/2hashtag_wc.png">
-
 
 The word cloud visually shows the frequency of the used hashtags from the Twitter dataset. #KnowBeforeYouOwe, #MoneyAsYouGrow, and #StudentDebtStress were most frequently used and likely point toward their focus as an organization, such as about thinking before borrowing, regarding student debt, and saving up money. They were closely trailed by #MoneyTalk, #AskCFPB, and #CFPW2020.
 
 
 ### Days of week
 
-
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/3days_of_week.png)
+<img src="Images/3days_of_week.png">
 
 The bar graphs give an overview of the activity based on the days of the week. The weekend was clearly not as active when compared to Tuesday-Thursday. Furthermore, the retweet and quote id were the least active, overall, particularly on Sunday.
 
