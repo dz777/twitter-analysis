@@ -33,6 +33,8 @@ The bar graphs give an overview of the activity based on the days of the week. T
 
 ![](https://github.com/dz777/twitter-analysis/blob/main/Images/4hashtag_pct.png)
 
+<img src="Images/4hashtag_pct.png">
+
 Overall, the top 10 hashtags account for around 22% of the total hashtags. The hashtags in the "others" (those below the top 10) account for around 78% of the hashtags. 
 
 Among these top 10 hashtags only, #MoneyAsYouGrow accounts for around 18%, the hashtags #knowbeforeyouowe with regards to #mortgages accounts for around 16%, and #KnowBeforeYouOwe for around 10%. 
@@ -40,6 +42,7 @@ Among these top 10 hashtags only, #MoneyAsYouGrow accounts for around 18%, the h
 
 ![](https://github.com/dz777/twitter-analysis/blob/main/Images/5hashtag_pct.png)
 
+<img src="Images/5hashtag_pct.png">
 
 Consumers often have complaints about the credit bureaus or large banks. In fact, companies such as Equifax have gone through very public issues like the 2017 data breach, which may have been reflected in this dataset. After checking to see how often there were mentions of "Equifax," "JPMorgan," "Experian," "Transunion," and "Capital One," it was not surprising to see that Equifax was holding the number one spot among these companies, representing around 56% of the mentions among these. Another credit agency called Experian was in second, followed by JPMorgan with around 14%. This is followed by another credit agency called Transunion with almost 9%, and then Capital One with around 7%.
 
