@@ -14,8 +14,6 @@ This project analyzes the Consumer Financial Protection Bureau's (CFPB) Twitter 
 
 ### Tweet type
 
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/1tweet_type_ratio.png)
-
 <img src="Images/1tweet_type_ratio.png">
 
 Based on the pie chart above, we can see that roughly two-thirds of the tweets from the @CFPB page were original tweets. Almost one-third were replies to others, only a very small percentage (2.81%) were retweets, and 0.28% were quotes. 
@@ -23,6 +21,8 @@ Based on the pie chart above, we can see that roughly two-thirds of the tweets f
 ### Hashtags
 
 ![](https://github.com/dz777/twitter-analysis/blob/main/Images/2hashtag_wc.png)
+<img src="Images/2hashtag_wc.png">
+
 
 The word cloud visually shows the frequency of the used hashtags from the Twitter dataset. #KnowBeforeYouOwe, #MoneyAsYouGrow, and #StudentDebtStress were most frequently used and likely point toward their focus as an organization, such as about thinking before borrowing, regarding student debt, and saving up money. They were closely trailed by #MoneyTalk, #AskCFPB, and #CFPW2020.
 
