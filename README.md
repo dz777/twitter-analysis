@@ -41,325 +41,41 @@ Overall, the top 10 hashtags account for around 22% of the total hashtags. The h
 Among these top 10 hashtags only, #MoneyAsYouGrow accounts for around 18%, the hashtags #knowbeforeyouowe with regards to #mortgages accounts for around 16%, and #KnowBeforeYouOwe for around 10%. 
 
 
-![]https://github.com/dz777/twitter-analysis/blob/main/Images/5hashtag_pct.png
+![](https://github.com/dz777/twitter-analysis/blob/main/Images/5hashtag_pct.png)
 
 
 Consumers often have complaints about the credit bureaus or large banks. In fact, companies such as Equifax have gone through very public issues like the 2017 data breach, which may have been reflected in this dataset. After checking to see how often there were mentions of "Equifax," "JPMorgan," "Experian," "Transunion," and "Capital One," it was not surprising to see that Equifax was holding the number one spot among these companies, representing around 56% of the mentions among these. Another credit agency called Experian was in second, followed by JPMorgan with around 14%. This is followed by another credit agency called Transunion with almost 9%, and then Capital One with around 7%.
 
 
-
-
-    [('us', 2907),
-     ('help', 2211),
-     ('financi', 2068),
-     ('thank', 1967),
-     ('complaint', 1503),
-     ('share', 1370),
-     ('learn', 1232),
-     ('submit', 1199),
-     ('cfpb', 1137),
-     ('resourc', 1134)]
-
-
-
-
-```python
-# WorldCloud
-#from wordcloud import WordCloud
-
-all_words = '' 
-
-# looping through incidents, join them to one text, extract most common words
-for arg in twitter_df["prep"]: 
-
-    tokens = arg.split()  
-      
-    all_words += " ".join(tokens)+" "
-
-wordcloud = WordCloud(width = 700, height = 700, 
-                background_color ='black', 
-                min_font_size = 10).generate(all_words) 
-  
-# plotting worldcloud                      
-plt.figure(figsize = (8, 10), facecolor = None) 
-plt.imshow(wordcloud) 
-plt.axis("off") 
-plt.tight_layout(pad = 0) 
-  
-
-plt.savefig('6cleaned_wc.png')
-
-plt.show()
-```
-
-
-![png](output_45_0.png)
+![](https://github.com/dz777/twitter-analysis/blob/main/Images/6cleaned_wc.png)
 
 
 Cleaning and preparing the data such as through the use of stop words allows us to get a more accurate understanding of the data and text itself. Not surprisinly, the most common text appears to be about submitting complaints which is expected since the CFPB has a very large complaints database that is regularly updated and consulted. What is interesting is that phrases such as "thank," "reach," "contact," "share," and "submit" are engaging and clear calls to actions, signaling that the CFPB appear to be trying to engage with their audience. 
 
+
 ### Number of tweets
 
 
-```python
-# overall number of tweets per year
-pd.to_datetime(twitter_df['parsed_created_at']).dt.year.value_counts()
-```
-
-
-
-
-    2018    2171
-    2019    1765
-    2016    1612
-    2017    1344
-    2015    1240
-    2020    1127
-    2013     582
-    2012     482
-    2011     480
-    2014     352
-    Name: parsed_created_at, dtype: int64
-
-
-
-
-```python
-# total favorited tweets by year
-twitter_df['parsed_created_at'] = twitter_df['parsed_created_at'].astype('datetime64')
-twitter_df.groupby([twitter_df['parsed_created_at'].dt.year])['favorite_count'].sum()
-```
-
-
-
-
-    parsed_created_at
-    2011      350
-    2012      750
-    2013     1146
-    2014     1342
-    2015     5844
-    2016    10646
-    2017     6649
-    2018     3469
-    2019     3411
-    2020     3003
-    Name: favorite_count, dtype: int64
-
-
-
-
-```python
-# saving total tweet count
-tweet_count = pd.to_datetime(twitter_df['parsed_created_at']).dt.year.value_counts()
-tweet_count = tweet_count.sort_index()
-tweet_count
-```
-
-
-
-
-    2011     480
-    2012     482
-    2013     582
-    2014     352
-    2015    1240
-    2016    1612
-    2017    1344
-    2018    2171
-    2019    1765
-    2020    1127
-    Name: parsed_created_at, dtype: int64
-
-
-
-
-```python
-# graphing tweets
-
-# converting 
-twitter_df['parsed_created_at'] = twitter_df['parsed_created_at'].astype('datetime64')
-
-# total favorites and retweet count by year
-favorites_by_year = twitter_df.groupby([twitter_df['parsed_created_at'].dt.year])["favorite_count"].sum()
-retweet_count = twitter_df.groupby([twitter_df['parsed_created_at'].dt.year])["retweet_count"].sum()
-
-# Creating plot, configuring the plot specifications inside the variables fig and ax
-fig, ax = plt.subplots(figsize=(14,5))
-
-# Plotting daily variable as a a line plot, set x,y, linewidth, and specifying ax, setting legend
-favorite_line = favorites_by_year.plot(kind='line', x='year', y='favorites', linewidth=2, ax=ax, legend=True, label='Favorited tweets')
-tweet_count_line = tweet_count.plot(kind='line', x='year', y='favorites', linewidth=2, ax=ax, legend=True, label='Total tweets')
-retweet_count_line = retweet_count.plot(kind='line', x='year', y='favorites', linewidth=2, ax=ax, legend=True, label='Retweets')
-
-# Setting x,y label and size
-ax.set_xlabel('Year', fontsize=14, fontweight = 'bold')
-ax.set_ylabel('Number of', fontsize=14, fontweight = 'bold')
-
-# title and subtitle
-ax.text(2011, 16000, "Number of favorited, retweets, and total tweets per year", fontsize=20, fontweight="bold")
-ax.text(2011, 15000, "2016 had the highest visibility and engagement", fontsize=15, fontweight="bold", alpha=0.85)
-
-plt.savefig('7tweets_compar.png')
-```
-
-
-![png](output_51_0.png)
+![](https://github.com/dz777/twitter-analysis/blob/main/Images/7tweets_compar.png)
 
 
 The year 2018 had the most number of tweets, overall. Also, the year 2020 had the lowest number of tweets when comparing from 2015 to today. In terms of favorited tweets, 2016 overwhelmingly had the most when compared to the whole time period between 2011 to 2020. In contrast, the year 2011 had the lowest number of favored tweets and this value has never been as low as that after, but rather, in general, has only increased. The year 2014 to 2016 saw a very sharp and significant hike in the number of favorited tweets. With regards to the retweets, it is the most unstable metric, having reached its lowest point in 2011, its highest in 2016, and shifting in between. 
 
+
 ### Retweets
 
 
-```python
-# creating table of retweets & tweet count
-# (https://towardsdatascience.com/visualization-of-information-from-raw-twitter-data-part-1-99181ad19c)
-# sorting the values of retweet 
-retweets_sorted = twitter_df.sort_values(by=['retweet_count'], ascending=False)
-
-# taking the @RT tweets from string and replacing, grouping by aggregate sum and count
-# and sorting by descending order, displaying first 10
-table = retweets_sorted[['retweet_count','text']].copy()
-table.text = table.text.str.extract('(?:RT )(@[\d\w]*:)')
-table.text = table.text.str.replace(":", "")
-table = table.groupby("text").aggregate(["sum", "count"]).sort_values([("retweet_count", "sum")], ascending=False).head(10)
-# creating and finding average retweet per tweet, rounding
-table["retweets per tweet"] = table[("retweet_count", "sum")]/table[("retweet_count", "count")]
-table.columns = ["Retweets", "Tweet Count", "Retweets per Tweet"]
-round(table, 2)
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Retweets</th>
-      <th>Tweet Count</th>
-      <th>Retweets per Tweet</th>
-    </tr>
-    <tr>
-      <th>text</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>@fema</th>
-      <td>1991</td>
-      <td>1</td>
-      <td>1991.00</td>
-    </tr>
-    <tr>
-      <th>@FTC</th>
-      <td>912</td>
-      <td>33</td>
-      <td>27.64</td>
-    </tr>
-    <tr>
-      <th>@SBAgov</th>
-      <td>885</td>
-      <td>7</td>
-      <td>126.43</td>
-    </tr>
-    <tr>
-      <th>@Readygov</th>
-      <td>783</td>
-      <td>6</td>
-      <td>130.50</td>
-    </tr>
-    <tr>
-      <th>@IRSnews</th>
-      <td>603</td>
-      <td>16</td>
-      <td>37.69</td>
-    </tr>
-    <tr>
-      <th>@CFPBDirector</th>
-      <td>557</td>
-      <td>5</td>
-      <td>111.40</td>
-    </tr>
-    <tr>
-      <th>@WhiteHouse</th>
-      <td>282</td>
-      <td>2</td>
-      <td>141.00</td>
-    </tr>
-    <tr>
-      <th>@CFPBMilitary</th>
-      <td>280</td>
-      <td>25</td>
-      <td>11.20</td>
-    </tr>
-    <tr>
-      <th>@usedgov</th>
-      <td>219</td>
-      <td>3</td>
-      <td>73.00</td>
-    </tr>
-    <tr>
-      <th>@CNNMoney</th>
-      <td>200</td>
-      <td>2</td>
-      <td>100.00</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+![](https://github.com/dz777/twitter-analysis/blob/main/Images/8retweets_table.png)
 
 
 The table shows some interesting information about the different retweets metrics. For example, the @fema retweet seems to have been the best-performing one. There was one RT (tweet count) of @fema which garnered 1,991 retweets, the highest value, giving it a very impressive performance and competitive average over the others. 
 
 
-```python
-# creating scatterplot of top tweet count and retweets of twitter handles
-table.plot.scatter("Tweet Count", "Retweets", figsize=(8,6))
-# setting text, esp @CNNMoney so it is legible
-for x,y,s in zip(table["Tweet Count"], table["Retweets"], table.index):
-    if s == "@CNNMoney":
-        plt.text(x-1,y-60,s)
-    else:
-        plt.text(x+.3,y+10,s)
-# title
-plt.title("Top 10 Retweeted Twitter Handles: Tweet Count vs. Retweets", fontweight='bold')
-
-plt.savefig('9retweeted.png')
-```
-
-
-![png](output_56_0.png)
+![png](https://github.com/dz777/twitter-analysis/blob/main/Images/9retweeted.png)
 
 
 The scatterplot depicts the relation between the number of times a specific Twitter handle tweeted, and the number of retweets. As noted above, @fema did very well, having a very low tweet count but a high number of retweets. @CFPBMilitary performed pretty poorly since it had a relatively high tweet count despite a fairly low retweet count in comparison. 
 
-
-```python
-# Printing out 10 highest performing tweets sorted by retweet count
-for i in range(10):
-    print(retweets_sorted.iloc[i]['text'])
-    print()
-```
 
     RT @fema: We have created a rumor control page for Hurricane #Florence that will be updated regularly. During disasters, it’s critical to a…
     
