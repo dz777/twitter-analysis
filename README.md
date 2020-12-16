@@ -31,8 +31,6 @@ The word cloud visually shows the frequency of the used hashtags from the Twitte
 
 The bar graphs give an overview of the activity based on the days of the week. The weekend was clearly not as active when compared to Tuesday-Thursday. Furthermore, the retweet and quote id were the least active, overall, particularly on Sunday.
 
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/4hashtag_pct.png)
-
 <img src="Images/4hashtag_pct.png">
 
 Overall, the top 10 hashtags account for around 22% of the total hashtags. The hashtags in the "others" (those below the top 10) account for around 78% of the hashtags. 
@@ -40,14 +38,11 @@ Overall, the top 10 hashtags account for around 22% of the total hashtags. The h
 Among these top 10 hashtags only, #MoneyAsYouGrow accounts for around 18%, the hashtags #knowbeforeyouowe with regards to #mortgages accounts for around 16%, and #KnowBeforeYouOwe for around 10%. 
 
 
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/5hashtag_pct.png)
-
 <img src="Images/5hashtag_pct.png">
 
 Consumers often have complaints about the credit bureaus or large banks. In fact, companies such as Equifax have gone through very public issues like the 2017 data breach, which may have been reflected in this dataset. After checking to see how often there were mentions of "Equifax," "JPMorgan," "Experian," "Transunion," and "Capital One," it was not surprising to see that Equifax was holding the number one spot among these companies, representing around 56% of the mentions among these. Another credit agency called Experian was in second, followed by JPMorgan with around 14%. This is followed by another credit agency called Transunion with almost 9%, and then Capital One with around 7%.
 
-
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/6cleaned_wc.png)
+<img src="Images/6cleaned_wc.png">
 
 
 Cleaning and preparing the data such as through the use of stop words allows us to get a more accurate understanding of the data and text itself. Not surprisinly, the most common text appears to be about submitting complaints which is expected since the CFPB has a very large complaints database that is regularly updated and consulted. What is interesting is that phrases such as "thank," "reach," "contact," "share," and "submit" are engaging and clear calls to actions, signaling that the CFPB appear to be trying to engage with their audience. 
@@ -55,23 +50,19 @@ Cleaning and preparing the data such as through the use of stop words allows us 
 
 ### Number of tweets
 
-
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/7tweets_compar.png)
-
+<img src="Images/7tweets_compar.png">
 
 The year 2018 had the most number of tweets, overall. Also, the year 2020 had the lowest number of tweets when comparing from 2015 to today. In terms of favorited tweets, 2016 overwhelmingly had the most when compared to the whole time period between 2011 to 2020. In contrast, the year 2011 had the lowest number of favored tweets and this value has never been as low as that after, but rather, in general, has only increased. The year 2014 to 2016 saw a very sharp and significant hike in the number of favorited tweets. With regards to the retweets, it is the most unstable metric, having reached its lowest point in 2011, its highest in 2016, and shifting in between. 
 
 
 ### Retweets
 
-
-![](https://github.com/dz777/twitter-analysis/blob/main/Images/8retweets_table.png)
-
+<img src="Images/8retweets_table.png">
 
 The table shows some interesting information about the different retweets metrics. For example, the @fema retweet seems to have been the best-performing one. There was one RT (tweet count) of @fema which garnered 1,991 retweets, the highest value, giving it a very impressive performance and competitive average over the others. 
 
 
-![png](https://github.com/dz777/twitter-analysis/blob/main/Images/9retweeted.png)
+<img src="Images/9retweeted.png">
 
 
 The scatterplot depicts the relation between the number of times a specific Twitter handle tweeted, and the number of retweets. As noted above, @fema did very well, having a very low tweet count but a high number of retweets. @CFPBMilitary performed pretty poorly since it had a relatively high tweet count despite a fairly low retweet count in comparison. 
